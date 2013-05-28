@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>piecake samples</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet/less" href="styles/style.less" type="text/css" media="screen" />
+    <script type="text/javascript" src="./scripts/less.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.Exception.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.RegexTokenizer.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.GrammarCompiler.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.SimpleTopDownParser.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.TopDownParser.js"></script>
+	<script type="text/javascript" src="../external/parjser/parjser.TopDownParserWithLookahead.js">
+	</script>
+    <script type="text/javascript" src="../external/require.js" data-main="./scripts/main.js"></script>
+</head>
+<body>
+    <div id="body">
+        <div class="nav">
+            <a href="./index.html">Home</a>
+            <a href="./index.html">Link</a>
+        </div>
+        
+        <div class="header">
+            <h1>piecake coding</h1>
+        </div>
+        
+        <div class="section">
+            <p>Use the web console.</p>
+			<textarea id="piecakeCodeSource">
+				module;
+				
+				add := \x\y(x+y);
+				sub := \x\y(x-y);
+				mul := \x\y(x*y);
+				div := \x\y(x/y);
+				
+				end module {
+					add: add,
+					sub: dub,
+					mul: mul,
+					div: div,
+				};
+			</textarea>
+			<a id="doTest" class="button">Do Test</a>
+			<div>Build Time: <span id="buildTime">0</span> ms</div>
+			<pre><code id="jsCodeTarget">
+			</code></pre>
+        </div>
+        
+        <div class="footer">
+            <p>page footer</p>
+        </div>
+    </div>
+</body>
+</html>

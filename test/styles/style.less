@@ -1,0 +1,155 @@
+html { background-color:black; }
+
+body, div, p, ul, header, footer, section, aside, nav, article {
+	display:block;
+    .layer(2);
+	margin:0px;
+	padding:0px;
+}
+
+ul {
+    list-style: none;
+}
+
+.layer(@value) {
+    position: relative;
+    z-index: floor(8 * @value);
+}
+
+.no-user-select () {
+	-moz-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.clickable {
+    .no-user-select;
+    background-color: #fff;
+    
+    &:hover {
+        background-color: #aaf;
+        cursor: pointer;
+    }
+    
+    &:active {
+        background-color: #aa8;
+        cursor: pointer;
+    }
+}
+
+ul.keen-ui-select {
+    border:solid #000 1px;
+    
+    li {
+        display: none;
+        margin: 1px;
+        padding: 2px;
+        
+        &.active {
+            display: block;
+        }
+    }
+    
+    &.expanded {
+        li {
+            .clickable;
+            display: block;
+            
+            &.active {
+                background-color:#aa8;
+            }
+        }
+    }
+}
+
+#body {
+    position: relative;
+	margin:5px auto;
+	padding:5px;
+	width:800px;
+	border:solid #000 2px;
+	background-color:#dfa;
+	color:#222;
+
+    nav, .nav {
+        .layer(0);
+        position: fixed;
+        margin: 100px -148px;
+        width: 132px;
+        padding:2px;
+        border:solid #000 1px;
+        background-color:#dfa;
+        
+        &:after {
+            visibility:hidden;
+            display:block;
+            clear:both;
+            height:0px;
+            content:' ';
+        }
+        
+        a {
+            display:block;
+            margin: 2px;
+            padding:0px 5px;
+            min-width:80px;
+            border:solid #000 1px;
+            color:#222;
+            .clickable;
+            text-align:center;
+            text-decoration:none;
+        }
+    }
+    
+    header, .header {
+        h1, h2, h3, h4, h5, h6 {
+            margin:0px -18px 5px;
+            padding:5px;
+            text-align:center;
+            border:solid #000 1px;
+            background-color:#fff;
+        }
+    }
+    
+    section, .section {
+        margin:12px -12px;
+        padding:5px;
+        min-height:200px;
+        border:solid #000 1px;
+        background-color:#fff;
+		
+		a.button {
+			display: inline-block;
+			padding: 2px;
+			cursor: pointer;
+			background-color: #AAA;
+			color: #228;
+			&:hover {
+				background-color: #004;
+				color: #fff;
+			}
+			&:active {
+				background-color: #008;
+				color: #888;
+			}
+		}
+		textarea {
+			display: block;
+			width: 100%;
+			height: 250px;
+		}
+    }
+    
+    footer, .footer {
+        clear:both;
+        margin:5px -18px 0px;
+        padding:5px;
+        border:solid #000 1px;
+        background-color:#fff;
+        font-size:75%;
+        text-align:center;
+    }
+}
