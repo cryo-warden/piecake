@@ -1,8 +1,10 @@
-#piecake
+I made this 27 May 2013 and haven't done anything with it since. Learned a lot since then, so I might revisit this with more wisdom. Immutability, less JavaScripty, everything a tree structure.
+
+# piecake
 
 Current state of development: **Very Early**; too early to even assign a version number.
 
-##Minimalism
+## Minimalism
 
 Every code element should be essential to correctness, readability, and/or maintainability.
 
@@ -40,7 +42,7 @@ A function can also be declared by a backslash followed by an expression. That f
 	twelve := addFive(7);
 	eight := addFive(3);
 
-##Flexibility
+## Flexibility
 
 Must allow behaviors not present in all vanilla JavaScript implementations.
 
@@ -56,7 +58,7 @@ Scope-limited extension methods:
 		console.log(15);
 	}, 10.seconds()); // Extensions not yet implemented.
 
-##Consistency
+## Consistency
 
 Very few constructs should have optional syntax. There are no function declarations, only function expressions, which may or may not be bound to a named variable.
 
